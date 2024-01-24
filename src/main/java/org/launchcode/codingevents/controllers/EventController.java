@@ -26,5 +26,10 @@ public class EventController {
         return "events/index";
     }
 
+    // lives at /events/create
+    @GetMapping("create")
+    public String renderCreateEventForm() {
+        return "events/create";
+    }
+
 }
-//how to clone and push files to my new github repo? i think i fucked it up
