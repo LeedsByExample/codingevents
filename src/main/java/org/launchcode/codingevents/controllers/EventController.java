@@ -39,4 +39,11 @@ public class EventController {
         EventData.add(new Event(eventName, eventDescription));
         return "redirect:/events"; //says to redirect to the root path for this controller
     }
+
+    @GetMapping("delete")
+    public String displayDeleteEventForm(Model model) {
+        model.addAttribute("title", "Delete Events");
+        model.addAttribute("events", EventData.getAll());
+        return "events/delete";
+    }
 }
